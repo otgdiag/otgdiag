@@ -3,306 +3,163 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
+
+  <meta name="title" content="OTG: Diagnosing Multi-Stage Vision Systems via Operational Transport Geometry">
+  <meta name="description" content="OTG diagnoses which internal stages of a frozen multi-stage vision system matter for its task score, using content-matched interventions and verdicts of harmless, consequential or undetermined.">
+  <meta name="keywords" content="operational transport geometry, distribution shift diagnosis, multi-stage vision systems, entropic optimal transport, interface interventions, simultaneous inference">
+  <meta name="robots" content="noindex">
+
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
-  <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <meta property="og:title" content="OTG: Operational Transport Geometry">
+  <meta property="og:description" content="Diagnosing which interfaces of a multi-stage vision system matter for its task score.">
+  <meta property="og:url" content="https://otgdiag.github.io/">
+  <meta property="og:image" content="https://otgdiag.github.io/static/images/og_image.png">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+  <title>OTG: Diagnosing Multi-Stage Vision Systems via Operational Transport Geometry</title>
 
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
-  <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="icon" type="image/svg+xml" href="static/images/favicon.svg">
+  <link rel="icon" type="image/png" href="static/images/favicon.png">
 
-
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
-  <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
-  <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  </noscript>
-  
-  <!-- Fonts - Optimized loading -->
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
+
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
-    "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
-    ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
-  }
-  </script>
+
+  <script>document.documentElement.classList.add("js");</script>
+
+  <style>
+    :root {
+      --paper: #fafaf7;        /* video background */
+      --ink: #252525;         /* video ink */
+      --text: #3d3a36;
+      --muted: #7b776f;
+      --accent: #9c7424;      /* video ochre, for fills and rules */
+      --accent-text: #86601a; /* darker ochre for text links (AA on paper) */
+      --accent-dark: #6b4d12;
+      --accent-light: #c8a85a;
+      --soft: #f1efe8;
+      --line: #e3e0d6;
+      --card: #fffefb;
+    }
+
+    /* ---- layout and figures ---- */
+    .fig { margin: 1.75rem 0 2.25rem; }
+    .fig img, .fig video, .fig svg { width: 100%; height: auto; display: block; margin: 0 auto; }
+    .fig svg { max-width: 720px; }
+    .fig video { border-radius: 6px; border: 1px solid var(--line); background-color: var(--paper); }
+    .fig figcaption { margin-top: .75rem; font-size: .95rem; color: var(--muted); text-align: left; }
+    .fig figcaption b { color: var(--ink); }
+    .body-text { text-align: justify; }
+    .tldr { font-size: 1.15rem; font-weight: 600; line-height: 1.5; margin-bottom: 1.5rem; color: var(--ink); }
+    .venue-line { margin-top: .25rem; color: var(--muted); }
+    .link-block .button.is-disabled { opacity: .55; pointer-events: none; }
+
+    /* ---- colour scheme ---- */
+    body { color: var(--text); background-color: var(--paper); }
+    a { color: var(--accent-text); }
+    a:hover { color: var(--accent-dark); }
+    .title, .hero.is-light .title, .content h1, .content h2, .content h3 { color: var(--ink); }
+    .publication-title { letter-spacing: -.01em; }
+    #main-content > section:first-of-type { background: linear-gradient(180deg, var(--soft) 0%, var(--paper) 100%); }
+    .hero.is-light { background-color: var(--soft); color: var(--text); }
+    .title.is-3.has-text-centered::after,
+    .hero.is-light .title.is-3::after {
+      content: ""; display: block; width: 44px; height: 3px; margin: .6rem auto 0;
+      border-radius: 2px; background: linear-gradient(90deg, var(--accent), var(--accent-light));
+    }
+    .link-block .button.is-dark {
+      background-color: transparent; border: 1.5px solid var(--accent); color: var(--accent-dark);
+      font-weight: 600; letter-spacing: .02em; padding-left: 1.1em; padding-right: 1.25em;
+      transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+    }
+    .link-block .button.is-dark:hover { background-color: var(--accent-dark); border-color: var(--accent-dark); color: #fff; }
+    .link-block .button.is-dark .icon { color: var(--accent); }
+    .link-block .button.is-dark:hover .icon { color: #fff; }
+    
+    .scroll-to-top { background-color: var(--accent-dark); }
+    .scroll-to-top:hover { background-color: var(--ink); }
+    .footer { background-color: var(--soft); }
+    #bibtex-code { background-color: var(--soft); border-left: 3px solid var(--accent); color: var(--ink); }
+    .copy-bibtex-btn { background-color: var(--accent-dark); border-color: var(--accent-dark); color: #fff; }
+    .copy-bibtex-btn:hover { background-color: var(--ink); border-color: var(--ink); }
+
+    /* ---- tables ---- */
+    .table { background-color: transparent; }
+    .results-table { margin: 1.5rem auto 0; font-size: .95rem; }
+    .results-table th { color: var(--ink); border-bottom: 2px solid var(--accent); }
+    .results-table td { vertical-align: top; border-color: var(--line); }
+    .results-table td:first-child { color: var(--ink); font-weight: 600; min-width: 10rem; }
+    .table.is-striped tbody tr:not(.is-selected):nth-child(even) { background-color: var(--soft); }
+    .hero.is-light .table.is-striped tbody tr:not(.is-selected):nth-child(even) { background-color: var(--paper); }
+    .hero.is-light .table { background-color: transparent; }
+    .hero.is-light .table tbody tr:nth-child(odd) { background-color: transparent; }
+
+    /* ---- method steps ---- */
+    .step-box { height: 100%; background-color: var(--card); border-top: 3px solid var(--accent); box-shadow: 0 2px 10px rgba(70, 50, 15, .08); }
+    .step-box:hover { box-shadow: 0 8px 24px rgba(70, 50, 15, .15); }
+    .step-box .step-title { font-weight: 700; margin-bottom: .35rem; color: var(--ink); }
+    .step-box p { text-align: left; font-size: .97rem; }
+
+    /* ---- scroll progress bar ---- */
+    .scroll-progress {
+      position: fixed; top: 0; left: 0; width: 100%; height: 3px; z-index: 1000;
+      background: linear-gradient(90deg, var(--accent), var(--accent-light));
+      transform-origin: 0 50%; transform: scaleX(0); pointer-events: none;
+    }
+
+    /* ---- reveal on scroll (only when JS is running) ---- */
+    .js .reveal {
+      opacity: 0; transform: translateY(18px);
+      transition: opacity .7s ease, transform .7s cubic-bezier(.2, .7, .2, 1), box-shadow .25s ease;
+      transition-delay: var(--d, 0s), var(--d, 0s), 0s;
+    }
+    .js .reveal.is-visible { opacity: 1; transform: none; }
+
+    /* ---- verdict figure: elements draw in one after another ---- */
+    .js .v-item { opacity: 0; transform: translateX(-12px); transition: opacity .6s ease, transform .6s ease; }
+    .js .is-visible .v-item { opacity: 1; transform: none; transition-delay: calc(var(--i, 0) * .28s + .25s); }
+
+    @media (prefers-reduced-motion: reduce) {
+      .js .reveal, .js .v-item { opacity: 1; transform: none; transition: none; }
+      .scroll-progress { display: none; }
+    }
+    @media (max-width: 768px) { .fig figcaption { font-size: .9rem; } }
+  </style>
 </head>
 <body>
 
+  <div class="scroll-progress" aria-hidden="true"></div>
 
-  <!-- Scroll to Top Button -->
   <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
   <main id="main-content">
+
+  <!-- Header -->
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+            <h1 class="title is-2 publication-title reveal">Diagnosing Multi-Stage Vision Systems via Operational Transport Geometry</h1>
+            <div class="is-size-5 publication-authors reveal" style="--d:.1s">
+              <span class="author-block">Anonymous Authors</span>
+            </div>
+            <div class="is-size-6 venue-line reveal" style="--d:.2s">Anonymous CVPR submission</div>
 
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
+            <div class="column has-text-centered reveal" style="--d:.3s">
+              <span class="link-block">
+                <!-- Remove is-disabled once the repository is public -->
+                <a class="external-link button is-normal is-rounded is-dark is-disabled" href="https://github.com/otgdiag/otgdiag" target="_blank" rel="noopener" role="link" aria-disabled="true" tabindex="-1">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
                 </a>
               </span>
             </div>
@@ -310,211 +167,245 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
-        </div>
+  <!-- Overview figure -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <figure class="fig reveal" style="margin-top:0;--d:.15s">
+          <video src="static/videos/OTG_full_v5.mp4" poster="static/images/otg_overview.png" autoplay muted loop playsinline controls preload="metadata" aria-label="Animated overview of OTG: domains are discovered and frozen, content-matched replay is run on a canonical family of interface groups, and each group receives a verdict against the tolerance band."></video>
+          <figcaption><b>Overview of OTG.</b> Domains are discovered once and then frozen. Content-matched replay on a canonical family of interface groups yields simultaneous intervals, and each group receives a verdict against the tolerance band. Diamonds are tests, dashed boxes are stop paths or budget bookkeeping, and loops are repeated steps.</figcaption>
+        </figure>
+        <p class="body-text reveal" style="--d:.1s">
+          A shift in a system's internal representations need not change what the system does. OTG measures the operational effect directly. It discovers candidate domains from the system's own representations, matches each input to donors from a reference domain on content descriptors such as labels or masks using entropic optimal transport, replaces the states at chosen interfaces with the donor's, and replays the downstream computation. Each interface or group of interfaces is then labelled harmless, consequential or undetermined against a tolerance band fixed in advance, and OTG abstains when the evidence cannot decide.
+        </p>
       </div>
     </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+  </section>
 
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+  <!-- Abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <h2 class="title is-3 reveal">Abstract</h2>
+          <div class="content has-text-justified reveal" style="--d:.1s">
+            <p>
+              Modern computer vision systems increasingly comprise interconnected models and processing stages, making it difficult to determine where domain-dependent performance differences arise and whether internal discrepancies have operational consequences. Large representational changes may leave system performance unaffected, while smaller changes or interactions between components can produce consequential effects. We introduce Operational Transport Geometry (OTG), a post-hoc framework for diagnosing domain-dependent behaviour in multi-model systems. OTG discovers candidate domains from internal representations and uses entropic optimal transport to construct counterfactual interventions matched on observed content. By substituting intermediate representations and replaying downstream computation, it estimates the operational effects of individual and joint interface interventions. To avoid exhaustive evaluation of intervention groups, OTG exploits structural blocking relations and decomposes group effects into interaction terms, enabling simultaneous inference under explicit structural assumptions. The framework distinguishes directly evaluated effects from structurally inferred effects, incorporates statistical uncertainty, and abstains when evidence is insufficient. It additionally reports domain-specific treatment comparisons, consequential interface groups, and sensitivity to alternative admissible transport couplings. We evaluate OTG on controlled computational systems and real-world vision pipelines, examining diagnostic correctness, interaction recovery, and computational efficiency.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End youtube video -->
+  </section>
 
+  <!-- Verdicts -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered reveal">Three verdicts</h2>
+      <p class="body-text reveal">
+        Each effect receives a simultaneous confidence interval and is compared with the tolerance band. An interval inside the band gives harmless, an interval wholly outside it gives consequential with a sign, and an interval that straddles an edge gives undetermined. Failing to reject a zero effect is never read as harmlessness.
+      </p>
+      <figure class="fig reveal">
+        <svg viewBox="0 0 720 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three confidence intervals on an effect axis with a shaded tolerance band. The first lies inside the band and is harmless. The second lies wholly above the band and is consequential. The third crosses the upper edge of the band and is undetermined." font-family="Inter, system-ui, sans-serif" font-size="14">
+          <g class="v-item" style="--i:0">
+          <rect x="280" y="36" width="160" height="140" fill="#e6e6e2"/>
+          <line x1="280" y1="36" x2="280" y2="176" stroke="#b3b3ae" stroke-dasharray="4 3"/>
+          <line x1="440" y1="36" x2="440" y2="176" stroke="#b3b3ae" stroke-dasharray="4 3"/>
+          <text x="360" y="26" text-anchor="middle" fill="#7b776f">tolerance band</text>
+          </g>
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
+          <g class="v-item" style="--i:1">
+          <text x="20" y="67" fill="#56794a" font-weight="700">harmless</text>
+          <line x1="320" y1="62" x2="400" y2="62" stroke="#56794a" stroke-width="2.5"/>
+          <line x1="320" y1="54" x2="320" y2="70" stroke="#56794a" stroke-width="2.5"/>
+          <line x1="400" y1="54" x2="400" y2="70" stroke="#56794a" stroke-width="2.5"/>
+          <circle cx="360" cy="62" r="4.5" fill="#56794a"/>
+          </g>
+
+          <g class="v-item" style="--i:2">
+          <text x="20" y="113" fill="#a8452c" font-weight="700">consequential</text>
+          <line x1="470" y1="108" x2="580" y2="108" stroke="#a8452c" stroke-width="2.5"/>
+          <line x1="470" y1="100" x2="470" y2="116" stroke="#a8452c" stroke-width="2.5"/>
+          <line x1="580" y1="100" x2="580" y2="116" stroke="#a8452c" stroke-width="2.5"/>
+          <circle cx="525" cy="108" r="4.5" fill="#a8452c"/>
+          </g>
+
+          <g class="v-item" style="--i:3">
+          <text x="20" y="159" fill="#6e6a63" font-weight="700">undetermined</text>
+          <line x1="390" y1="154" x2="500" y2="154" stroke="#6e6a63" stroke-width="2.5" stroke-dasharray="6 3"/>
+          <line x1="390" y1="146" x2="390" y2="162" stroke="#6e6a63" stroke-width="2.5"/>
+          <line x1="500" y1="146" x2="500" y2="162" stroke="#6e6a63" stroke-width="2.5"/>
+          <circle cx="445" cy="154" r="4.5" fill="#6e6a63"/>
+          </g>
+
+          <g class="v-item" style="--i:4">
+          <line x1="40" y1="190" x2="690" y2="190" stroke="#9a9790"/>
+          <path d="M690 190 l-8 -4 v8 z" fill="#9a9790"/>
+          <text x="360" y="215" text-anchor="middle" fill="#7b776f">effect on the task score of replacing the states at an interface or group of interfaces</text>
+          </g>
+        </svg>
+        <figcaption>Schematic of the verdict rule. Intervals are illustrative. Dots are point estimates.</figcaption>
+      </figure>
     </div>
-  </div>
-</section>
-<!-- End video carousel -->
+  </section>
 
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+  <!-- Method -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered reveal">How OTG works</h2>
+      <div class="columns is-multiline">
+        <div class="column is-half">
+          <div class="box step-box reveal" style="--d:0.00s">
+            <p class="step-title">1. Discover domains</p>
+            <p>A Gaussian mixture is fitted to low-dimensional summaries at the earliest embedding interface on a separate split of the data. The hard membership map is frozen before any inference.</p>
+          </div>
+        </div>
+        <div class="column is-half">
+          <div class="box step-box reveal" style="--d:0.12s">
+            <p class="step-title">2. Match on content</p>
+            <p>Each input is paired with donors from a reference domain through an entropic transport plan over content descriptors, never over internal states, which may carry the very discrepancy under diagnosis.</p>
+          </div>
+        </div>
+        <div class="column is-half">
+          <div class="box step-box reveal" style="--d:0.24s">
+            <p class="step-title">3. Replay at interfaces</p>
+            <p>States at a group of interfaces are replaced by those of the donor and the downstream computation is rerun. Blocking relations in the computation graph make many groups redundant, so only a canonical family is replayed, and joint effects are written through interaction terms.</p>
+          </div>
+        </div>
+        <div class="column is-half">
+          <div class="box step-box reveal" style="--d:0.36s">
+            <p class="step-title">4. Issue verdicts</p>
+            <p>Simultaneous intervals against the tolerance band give each group a verdict, an evidence label (direct or inferred) and a sensitivity to alternative matchings. Under the stated assumptions, all definitive verdicts are correct simultaneously with probability at least 0.95.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-<!--End paper poster -->
 
+  <!-- Results -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered reveal">Results</h2>
+      <p class="body-text reveal">
+        Controlled systems fix the truth by oracle. Recorded systems fix it through a planted fault, an effect with a closed form, or the accuracy gain from fine-tuning a block. Resolution costs are listed beside each result.
+      </p>
+      <div class="table-container reveal">
+        <table class="table is-fullwidth is-striped results-table">
+          <thead>
+            <tr><th>Study</th><th>Result</th><th>Resolution</th></tr>
+          </thead>
+          <tbody>
+            <tr class="reveal" style="--d:0.00s">
+              <td>Controlled systems with oracle effects</td>
+              <td>No wrong definitive verdict in 4,300 datasets, with exact upper bound 0.00123 on the 3,000 primary datasets.</td>
+              <td>3,700 fully definitive, 200 partially definitive, 400 refusals, all in the four cells built to violate a declaration.</td>
+            </tr>
+            <tr class="reveal" style="--d:0.07s">
+              <td>Imbalance versus treatment</td>
+              <td>When the gap is a difference in content mix alone, no mistreatment is declared in any of 300 datasets in each of three variants. Attributing the whole gap to treatment declares it in all 300.</td>
+              <td>A planted treatment of 0.06 near the band is missed in 4 of 300 datasets. Descriptive, outside the guarantee.</td>
+            </tr>
+            <tr class="reveal" style="--d:0.14s">
+              <td>Content matching versus embedding nearest neighbour</td>
+              <td>OTG recovers 99% of the effect. The embedding-based alternative declares the interface harmless in all 100 datasets of each variant.</td>
+              <td>OTG is definitive and correct in 100 and 98 of 100 datasets in the two variants.</td>
+            </tr>
+            <tr class="reveal" style="--d:0.21s">
+              <td>Detector chain, 534 lamps, 12 planted faults</td>
+              <td>The planted stage is the only stage with a nonzero effect in every fault. Seven faults, with effects 0.227 to 0.637, are consequential.</td>
+              <td>The other five, with effects 0.013 to 0.097, are undetermined against the band of ±0.05.</td>
+            </tr>
+            <tr class="reveal" style="--d:0.28s">
+              <td>Audit pipeline built from 24 real drives</td>
+              <td>331 of 333 verdicts on fault-free stages are harmless and none is consequential. All 45 verdicts in the no-fault datasets are harmless.</td>
+              <td>The faulted stage is consequential wherever its effect is at least 0.084, in 4 of the 12 datasets with effects 0.059 to 0.072, and in none at 0.052 or below.</td>
+            </tr>
+            <tr class="reveal" style="--d:0.35s">
+              <td>ViT-B/16 on PACS and Office-Home, input interface</td>
+              <td>With class-share adjustment, mean absolute error is 0.005 and the interval covers the closed-form effect in all 8 target domains. With unmatched donors the error is 0.822 and no interval covers.</td>
+              <td>Without the adjustment the error is 0.122 and the interval covers in 2 domains.</td>
+            </tr>
+            <tr class="reveal" style="--d:0.42s">
+              <td>Class-mix change with a grey square, 144 cells</td>
+              <td>Where the square changes the error by at least 0.10, OTG calls the input consequential in 53 of 55 cells, random donors in 44 and nearest neighbours in none. In the 24 cells without a square on which all three ran, OTG and nearest neighbours call no interface consequential and random donors do so in all 24.</td>
+              <td>The input and the last two groups of blocks are undetermined in 27 of 36 cells without a square, so 0.55 of OTG's rows are harmless against 1.00 for nearest neighbours.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
+      <hr style="background-color: black;">
+    </div>
+  </section>
 
-<!--BibTex citation -->
+  <!-- BibTeX -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
-      <div class="bibtex-header">
+      <div class="bibtex-header reveal">
         <h2 class="title">BibTeX</h2>
         <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
           <i class="fas fa-copy"></i>
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
+      <pre id="bibtex-code" class="reveal" style="--d:.1s"><code>@misc{otgdiag2026,
+  title  = {Diagnosing Multi-Stage Vision Systems via Operational Transport Geometry},
+  author = {Anonymous},
+  year   = {2026},
+  note   = {Under review}
 }</code></pre>
     </div>
-</section>
-<!--End BibTex citation -->
+  </section>
 
+  </main>
 
   <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              <br> This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+  <script>
+    (function () {
+      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var els = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
 
-    <!-- End of Statcounter Code -->
+      if (reduce || !("IntersectionObserver" in window)) {
+        els.forEach(function (el) { el.classList.add("is-visible"); });
+      } else {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add("is-visible"); io.unobserve(e.target); }
+          });
+        }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+        els.forEach(function (el) { io.observe(el); });
+      }
 
-  </body>
-  </html>
+      var bar = document.querySelector(".scroll-progress");
+      var ticking = false;
+      function update() {
+        var h = document.documentElement;
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.transform = "scaleX(" + (max > 0 ? h.scrollTop / max : 0) + ")";
+        ticking = false;
+      }
+      window.addEventListener("scroll", function () {
+        if (!ticking) { ticking = true; requestAnimationFrame(update); }
+      }, { passive: true });
+      update();
+    })();
+  </script>
+
+</body>
+</html>
