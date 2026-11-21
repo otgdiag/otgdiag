@@ -1,3 +1,62 @@
+<div align="center">
+
+# Operational Transport Geometry (OTG)
+
+**Diagnosing Multi-Stage Vision Systems via Operational Transport Geometry**
+
+<br>
+
+## &#128279; PROJECT PAGE: [**otgdiag.github.io/otgdiag**](https://otgdiag.github.io/otgdiag/)
+
+[![Open the project page](https://img.shields.io/badge/%E2%96%B6%20OPEN%20THE%20PROJECT%20PAGE-otgdiag.github.io%2Fotgdiag-9c7424?style=for-the-badge&labelColor=252525)](https://otgdiag.github.io/otgdiag/)
+
+</div>
+
+> [!IMPORTANT]
+> **You are on the repository, not the project page.** The overview, method, results, figures and BibTeX are all on the project page: **https://otgdiag.github.io/otgdiag/**
+
+---
+
+## About
+
+OTG is a post-hoc framework for diagnosing domain-dependent behaviour in multi-stage vision systems, which it treats as a frozen computation graph. It discovers candidate domains from the system's own representations, matches each input to donors from a reference domain on content descriptors using entropic optimal transport, replaces the states at chosen interfaces with the donor's, and replays the downstream computation. Each interface or group of interfaces is labelled harmless, consequential or undetermined against a tolerance band fixed in advance, and OTG abstains when the evidence cannot decide.
+
+The paper is an anonymous submission under review.
+
+## What is in this repository
+
+This repository holds the source of the project page.
+
+| Path | Contents |
+| --- | --- |
+| `index.html` | The project page |
+| `static/css/` | Stylesheets |
+| `static/js/` | Scripts |
+| `static/images/` | Figures, favicon and social preview image |
+| `static/videos/` | Overview video |
+
+## Viewing the page locally
+
+```bash
+git clone https://github.com/otgdiag/otgdiag.git
+cd otgdiag
+python3 -m http.server 8000
+```
+
+Then open `http://localhost:8000/` in a browser.
+
+## Citation
+
+The BibTeX entry is at the bottom of the [project page](https://otgdiag.github.io/otgdiag/#BibTeX).
+
+---
+
+## Acknowledgment
+
+The project page is built on the Academic Project Page Template by Eliahu Horwitz. The template's original README is kept below in full.
+
+---
+
 # Academic Project Page Template
 
 > **Update (September 2025)**: This template has been modernized with better design, SEO, and mobile support. For the original version, see the [original-version branch](https://github.com/eliahuhorwitz/Academic-project-page-template/tree/original-version).
